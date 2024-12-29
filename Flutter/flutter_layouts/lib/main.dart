@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:logger/logger.dart'; // Import the logger package
 
 void main() {
   runApp(const MyApp());
