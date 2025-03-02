@@ -65,7 +65,7 @@ class _LiveLocationScreenState extends State<LiveLocationScreen> {
     _positionStream = Geolocator.getPositionStream(
       locationSettings: LocationSettings(
         accuracy: LocationAccuracy.high,
-        distanceFilter: 10, //
+        distanceFilter: 2, //
       ),
     ).listen((Position position) {
       setState(() {

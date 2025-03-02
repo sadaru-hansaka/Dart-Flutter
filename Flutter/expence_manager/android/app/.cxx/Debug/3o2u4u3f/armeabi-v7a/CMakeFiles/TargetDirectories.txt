@@ -1,0 +1,2 @@
+D:/Dart-Flutter/Flutter/expence_manager/android/app/.cxx/Debug/3o2u4u3f/armeabi-v7a/CMakeFiles/edit_cache.dir
+D:/Dart-Flutter/Flutter/expence_manager/android/app/.cxx/Debug/3o2u4u3f/armeabi-v7a/CMakeFiles/rebuild_cache.dir

@@ -43,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen>
           labelColor: Colors.white,
           unselectedLabelColor: Colors.white70,
           tabs: [
-            Tab(text: "By Date"),
+            Tab(text: "By Expense"),
             Tab(text: "By Category"),
           ],
         ),
@@ -125,7 +125,7 @@ class _HomeScreenState extends State<HomeScreen>
                 margin: EdgeInsets.symmetric(horizontal: 10, vertical: 12),
                 child: ListTile(
                   title: Text(
-                      "${expense.payee} - \$${expense.amount.toStringAsFixed(2)}"),
+                      "${getTagNameById(context, expense.tag)} - \$${expense.amount.toStringAsFixed(2)}"),
                   subtitle: Text(
                       "$formattedDate - Category: ${getCategoryNameById(context, expense.categoryId)}"),
                   isThreeLine: true,
@@ -182,7 +182,7 @@ class _HomeScreenState extends State<HomeScreen>
                       leading:
                           Icon(Icons.monetization_on, color: Colors.deepPurple),
                       title: Text(
-                          "${expense.payee} - \$${expense.amount.toStringAsFixed(2)}"),
+                          "${getTagNameById(context, expense.tag)} - \$${expense.amount.toStringAsFixed(2)}"),
                       subtitle:
                           Text(DateFormat('MMM dd, yyyy').format(expense.date)),
                     );
@@ -202,5 +202,12 @@ class _HomeScreenState extends State<HomeScreen>
         .categories
         .firstWhere((cat) => cat.id == categoryId);
     return category.name;
+  }
+
+  String getTagNameById(BuildContext context, String tagId) {
+    var tag = Provider.of<ExpenseProvider>(context, listen: false)
+        .tags
+        .firstWhere((tag) => tag.id == tagId);
+    return tag.name;
   }
 }

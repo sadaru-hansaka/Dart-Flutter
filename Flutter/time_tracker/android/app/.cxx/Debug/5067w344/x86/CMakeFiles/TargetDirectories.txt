@@ -1,0 +1,2 @@
+D:/Flutter/time_tracker/android/app/.cxx/Debug/5067w344/x86/CMakeFiles/edit_cache.dir
+D:/Flutter/time_tracker/android/app/.cxx/Debug/5067w344/x86/CMakeFiles/rebuild_cache.dir
